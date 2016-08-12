@@ -633,7 +633,13 @@ void RagdollDemo::DeleteObject(int index)
 // Step 4 - Assignment 6
 void RagdollDemo::CreateHinge(int index, int body1, int body2, double x, double y, double z, double ax, double ay, double az)
 {
+    // Step 8
+    btVector3 p(x, y, z);
+    btVector3 a(ax, ay, az);
     
+    // Step 9
+    btVector3 p1 = PointWorldToLocal(body1, p);
+    btVector3 p2 = PointWorldToLocal(body2, p);
 }
 
 
