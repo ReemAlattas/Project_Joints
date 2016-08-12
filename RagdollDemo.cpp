@@ -640,6 +640,10 @@ void RagdollDemo::CreateHinge(int index, int body1, int body2, double x, double 
     // Step 9
     btVector3 p1 = PointWorldToLocal(body1, p);
     btVector3 p2 = PointWorldToLocal(body2, p);
+    
+    // Step 10
+    btVector3 a1 = AxisWorldToLocal(body1, a);
+    btVector3 a2 = AxisWorldToLocal(body2, a);
 }
 
 
