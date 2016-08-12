@@ -91,6 +91,14 @@ public:
         return local1 * p;
     }
     
+    // Step 7 - Assignment 6
+    btVector3 AxisWorldToLocal(int index, btVector3 &a) {
+        btTransform local1 = body[index]->getCenterOfMassTransform().inverse();
+        btVector3 zero(0,0,0);
+        local1.setOrigin(zero);
+        return local1 * a;
+    }
+    
     // Step 10
     void DeleteObject(int index);
     
