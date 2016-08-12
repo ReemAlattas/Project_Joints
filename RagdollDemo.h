@@ -99,6 +99,9 @@ public:
         return local1 * a;
     }
     
+    // Step 12 - Assignment 6
+    void DestroyHinge(int index);
+    
     // Step 10
     void DeleteObject(int index);
     
