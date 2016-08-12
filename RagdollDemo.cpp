@@ -477,6 +477,9 @@ void	RagdollDemo::exitPhysics()
     // Step 12 - Assignment 5
     DeleteObject(0);
     
+    // Step 14 - Assignment 6
+    DestroyHinge(0);
+    
     int i;
     
     for (i=0;i<m_ragdolls.size();i++)
