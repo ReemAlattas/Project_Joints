@@ -83,8 +83,13 @@ public:
     void CreateCylinder3(int index, double x, double y, double z, double diameter, double sideLength, int angle);
     
     // Step 4 - Assignment 6
-    void CreateHinge(int index, int body1, int body2, double x, double y, double z, double ax, double ay, double az);
+    void CreateHinge(int index, int body1, int body2, double x, double y, double z, double ax, double ay, double a);
 
+    // Step 6 - Assignment 6
+    btVector3 PointWorldToLocal(int index, btVector3 &p) {
+        btTransform local1 = body[index]->getCenterOfMassTransform().inverse();
+        return local1 * p;
+    }
     
     // Step 10
     void DeleteObject(int index);
