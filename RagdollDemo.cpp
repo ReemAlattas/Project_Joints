@@ -623,12 +623,19 @@ void RagdollDemo::CreateCylinder3(int index, double x, double y, double z, doubl
     m_dynamicsWorld->addRigidBody(body[index]);
 }
 
-//Step 10
+// Step 10
 void RagdollDemo::DeleteObject(int index)
 {
     m_dynamicsWorld->removeRigidBody(body[index]);
     delete body[index];
 }
+
+// Step 4 - Assignment 6
+void RagdollDemo::CreateHinge(int index, int body1, int body2, double x, double y, double z, double ax, double ay, double az)
+{
+    
+}
+
 
 
 

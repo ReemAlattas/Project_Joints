@@ -82,6 +82,10 @@ public:
     
     void CreateCylinder3(int index, double x, double y, double z, double diameter, double sideLength, int angle);
     
+    // Step 4 - Assignment 6
+    void CreateHinge(int index, int body1, int body2, double x, double y, double z, double ax, double ay, double az);
+
+    
     // Step 10
     void DeleteObject(int index);
     
