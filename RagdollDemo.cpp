@@ -651,6 +651,14 @@ void RagdollDemo::CreateHinge(int index, int body1, int body2, double x, double 
                                           a1, a2, false);
 }
 
+// Step 12 - Assignment 6
+void DestroyHinge(int index)
+{
+    m_dynamicsWorld->removeHingeConstraint(body[index]);
+    delete joints[index];
+}
+
+
 
 
 
