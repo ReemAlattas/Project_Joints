@@ -641,12 +641,12 @@ void RagdollDemo::CreateHinge(int index, int body1, int body2, double x, double 
     btVector3 a(ax, ay, az);
     
     // Step 9
-    btVector3 p1 = PointWorldToLocal(body1, p);
-    btVector3 p2 = PointWorldToLocal(body2, p);
+    btVector3 p1 = PointWorldToLocal(body1, flipZY(p));
+    btVector3 p2 = PointWorldToLocal(body2, flipZY(p));
     
     // Step 10
-    btVector3 a1 = AxisWorldToLocal(body1, a);
-    btVector3 a2 = AxisWorldToLocal(body2, a);
+    btVector3 a1 = AxisWorldToLocal(body1, flipZY(a));
+    btVector3 a2 = AxisWorldToLocal(body2, flipZY(a));
     
     // create
     joints[index] = new btHingeConstraint(*body[body1], *body[body2],
