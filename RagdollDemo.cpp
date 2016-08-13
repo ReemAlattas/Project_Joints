@@ -652,6 +652,9 @@ void RagdollDemo::CreateHinge(int index, int body1, int body2, double x, double 
     joints[index] = new btHingeConstraint(*body[body1], *body[body2],
                                           p1, p2,
                                           a1, a2, false);
+    
+    // Add to simulation
+    m_dynamicsWorld->addConstraint( joints[index] , true );
 }
 
 // Step 12 - Assignment 6
