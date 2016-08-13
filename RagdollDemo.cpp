@@ -396,6 +396,10 @@ void RagdollDemo::initPhysics()
     CreateCylinder3(7, 0., 0., 3., 0.2, 1., -55); // Create Leg 7
     CreateCylinder3(8, 0., 0., -3., 0.2, 1., -55); // Create Leg 8
     
+    //Create the hinges
+    CreateHinge(0, 1, 5, 2, 1, 0, 3, 0, 0);
+
+    
     clientResetScene();
 }
 
@@ -641,7 +645,7 @@ void RagdollDemo::CreateHinge(int index, int body1, int body2, double x, double 
     btVector3 a(ax, ay, az);
     
     // Step 9
-    btVector3 p1 = PointWorldToLocal(body1, flipZY(p));
+    btVector3 p1 = PointWorldToLocal(body1, p);
     btVector3 p2 = PointWorldToLocal(body2, flipZY(p));
     
     // Step 10
