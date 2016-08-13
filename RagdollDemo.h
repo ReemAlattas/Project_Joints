@@ -105,6 +105,15 @@ public:
     // Step 10
     void DeleteObject(int index);
     
+    // Step 14(b) - Assignment 6
+    btVector3 flipZY(btVector3 input) {
+        btScalar temp;
+        temp = input[1];
+        input[1] = input[2];
+        input[2] = temp;
+        return input;
+    }
+    
     static DemoApplication* Create()
     {
         RagdollDemo* demo = new RagdollDemo();
