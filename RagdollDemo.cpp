@@ -654,13 +654,14 @@ void RagdollDemo::CreateHinge(int index, int body1, int body2, double x, double 
                                           a1, a2, false);
     
     // Add to simulation
-    m_dynamicsWorld->addConstraint( joints[index] , true );
+    m_dynamicsWorld->addConstraint(joints[index], true );
 }
 
 // Step 12 - Assignment 6
 void DestroyHinge(int index)
 {
-    m_dynamicsWorld->removeHingeConstraint(body[index]);
+    // Remove from simulation
+    m_dynamicsWorld->removeHingeConstraint(joints[index]);
     delete joints[index];
 }
 
